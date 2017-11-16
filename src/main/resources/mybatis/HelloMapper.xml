@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--完全对应接口，不然报错-->
+<mapper namespace="com.lijia.dao.HelloMapper" >
+
+    <resultMap id="BaseResultMap" type="com.lijia.bean.User">
+        <result column="id" property="id" />
+        <result column="username" property="username" />
+    </resultMap>
+    <!-- 根据条件查询-->
+    <select id="findUserByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select * from user where username = #{username}
+    </select>
+</mapper>
