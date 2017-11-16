@@ -10,3 +10,10 @@ public interface HelloMapper {
     @Select("select * from user where username = #{username}")
     public User findUserByName(String username);
 }
+
+//用xml,什么都不用加
+
+//public interface HelloMapper {
+//
+//    public User findUserByName(String username);
+//}
